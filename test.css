@@ -43,6 +43,10 @@ body {
     color: #fff;
     display: none;
 }
+.containers .pojok {
+    margin-top: 10px;
+    position: fixed;
+}
 .logo{
     position: absolute;
     left: 120px;
@@ -58,19 +62,21 @@ body {
     margin-top: 10px;
     /* background-color: hsla(210, 51%, 61%, 0.7); */
     background-color: rgb(79, 154, 252);
-    margin-right: 100px;
+    margin-right: 0px;
     /* margin-left: 100px; */
     border-radius: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 350px;
-    padding-right: 300px;
+    padding-left: 270px;
+    padding-right: 270px;
+    /* border: #000 5px solid; */
 
 
 }
 
 .navbar ul li {
     display: inline;
+    /* border: #333 5px solid; */
     /* word-spacing: 20px; */
 }
 
@@ -81,6 +87,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    /* border: #ff2828 5px solid; */
 }
 
 .navbar ul li a:hover{
@@ -132,7 +139,9 @@ a:hover,a.active{
     .navbar {
         display: none;
     }
-
+    .logo {
+        display: none;
+    }
     .toggle-btn {
         display: block;
     }
@@ -144,6 +153,7 @@ a:hover,a.active{
     .containers {
         display: flex;
         justify-content: end;
+        /* position: fixed; */
         /* justify-content: center; */
         align-items: center;
         /* padding: 10px; */
@@ -214,6 +224,7 @@ a:hover,a.active{
 .visi .misi {
     display: flex;
     align-items: center;
+    /* border: #000 5px solid; */
     /* padding-left: 20px; */
    
 }
@@ -222,6 +233,9 @@ a:hover,a.active{
     width: 50%;
     /* background-color: hsla(210, 81%, 71%, 0.5); */
     padding-left: 80px;
+    /* border: #000 5px solid; */
+    margin-bottom: 100px;
+
 }
 .paragraf h1 {
     text-align: center;
@@ -255,7 +269,20 @@ a:hover,a.active{
     border-radius: 10px;
     border: #000 3px solid;
 }
-
+@media screen and (max-width: 920px){
+    .interview {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .interview2 h1 {
+        font-size: 28px;
+        text-align: center;
+        align-items: center;
+    }
+}
 @media screen and (max-width: 720px){
     .misi {
         flex-direction: column;
@@ -271,4 +298,46 @@ a:hover,a.active{
         /* background-color: hsla(210, 81%, 71%, 0.5); */
         padding-left: 0px;
     }
+}
+
+.interview {
+    /* border: #000 5px solid; */
+    display: flex;
+    justify-content: space-between;
+    opacity: 0; /* Atur opacity menjadi 0 agar awalnya elemen tidak terlihat */
+    transition: opacity 0.5s ease-in-out; /* Atur transisi untuk perubahan opacity */
+}
+.interview-img {
+    padding-top: 30px;
+    /* border: #000 5px solid; */
+    background-color: #e5e5e592;
+    transition: transform 0.5s ease-in-out;
+}
+.interview-img img{
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.interview2 h1{
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.inter {
+    background: url(Sunset.png);
+    background-size: cover;
+    /* padding-left: 10px; */
+}
+
+.show {
+    opacity: 1;
+  }
+
+.slide-in {
+    transform: translateY(19);
 }
