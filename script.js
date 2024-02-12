@@ -22,3 +22,25 @@ function toggleSidebar() {
         sidebar.style.left = '-250px';
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var gallery = document.querySelector('.interview');
+    var galleryTop = gallery.getBoundingClientRect().top;
+  
+    function checkGallery() {
+      if (galleryTop - window.innerHeight < 0) {
+        gallery.classList.add('show');
+        var imageContainers = document.querySelectorAll('.interview-img');
+        imageContainers.forEach(function(container, index) {
+          setTimeout(function() {
+            container.classList.add('slide-in');
+          }, index * 5); // Menambahkan jeda antara setiap animasi untuk efek slide-in yang bertahap
+        });
+        window.removeEventListener('scroll', checkGallery);
+      }
+    }
+  
+    window.addEventListener('scroll', checkGallery);
+  });
+  
